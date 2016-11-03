@@ -5,11 +5,23 @@ body {
 header, footer {
     background-color: rgb(74,66,87);
     color: rgb(214, 230, 231);
+    margin: 0;
+    padding: 0;
+    
+    
+}
+header li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
 }
 header a, footer a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
+}
+footer {
+    
 }
 ul {
     list-style-type: none;
