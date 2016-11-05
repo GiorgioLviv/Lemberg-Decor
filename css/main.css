@@ -76,6 +76,7 @@ div.colors {
     width: 80%;
     margin: 0 auto;
 }
+/*color browser for images*/
 .colors {
     text-align: center;
 }
@@ -127,4 +128,14 @@ li.color:nth-child(8) a:before {
 }
 li.color:nth-child(9) a:before {
     border-color: green;
+}
+
+/*links behavior*/
+
+a:hover {
+    text-shadow: 0px 0px 10px rgb(214, 230, 231);
+}
+a:active {
+    text-shadow: 0px 0px 10px rgb(152,251,152);
+    color: rgb(152,251,152);
 }
