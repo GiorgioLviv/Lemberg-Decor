@@ -5,7 +5,9 @@
 body {
     -webkit-display: flex;
     -webkit-flex-flow: column wrap;
+    -wekit-justify-content: space-between;
     flex-flow: column wrap;
+    justify-content: space-between;
     display: flex;
     min-height: 100vh;
     -moz-box-sizing: border-box;
@@ -68,6 +70,7 @@ header a, footer a {
     display: block;
     min-height: 100%;
     margin-bottom: 10px;
+    align-self: flex-start;
 }
 footer {
     -webkit-display: flex;
