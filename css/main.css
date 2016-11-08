@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+a:hover {
+    text-decoration: none;
+    color: white;
+}
 body {
     -webkit-display: flex;
     -webkit-flex-flow: column wrap;
@@ -67,11 +71,41 @@ header a, footer a {
      padding: 10px;
 }
 .main-container {
-    display: block;
+    -webkit-display: flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     min-height: 100%;
     margin-bottom: 10px;
-    align-self: flex-start;
 }
+/*Here is some style of carousel*/
+.carousel {
+    margin: 30px auto 0 auto;
+}
+.carousel img {
+    max-width: 640px;
+    max-height: 480px;
+}
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+    color: rgb(74, 66, 87);
+}
+.left, .right {
+    background-color: rgb(195, 223, 229);
+}
+.carousel-indicators li {
+    border-color: rgb(74, 66, 87);
+}
+.carousel-indicators li.active {
+    background-color: rgb(74, 66, 87);
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+}
+/*Here is the end of carousel style*/
 footer {
     -webkit-display: flex;
     -webkit-flex-flow: row wrap;
@@ -81,7 +115,8 @@ footer {
     justify-content: space-between;
     height: 80px;
     margin-bottom: 0;
-    align-items: flex-end;
+    align-items: center;
+   
 }
 .content { 
     min-height:100%;
