@@ -1,7 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 a:hover {
     text-decoration: none;
     color: white;
@@ -80,32 +76,7 @@ header a, footer a {
     min-height: 100%;
     margin-bottom: 10px;
 }
-/*Here is some style of carousel*/
-.carousel {
-    margin: 30px auto 0 auto;
-}
-.carousel img {
-    max-width: 640px;
-    max-height: 480px;
-}
-.glyphicon-chevron-left, .glyphicon-chevron-right {
-    color: rgb(74, 66, 87);
-}
-.left, .right {
-    background-color: rgb(195, 223, 229);
-}
-.carousel-indicators li {
-    border-color: rgb(74, 66, 87);
-}
-.carousel-indicators li.active {
-    background-color: rgb(74, 66, 87);
-}
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-}
-/*Here is the end of carousel style*/
+
 footer {
     -webkit-display: flex;
     -webkit-flex-flow: row wrap;
@@ -125,70 +96,9 @@ footer {
     width: 80%;
     margin: 0 auto;
 }
-div.colors {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-}
 .images {
     margin: 0 auto;
 }
-/*color browser for images*/
-.colors {
-    text-align: center;
-}
-.colorlist {
-    list-style-type: none;
-    }
-.color {
-  display: inline-block;
-  margin: 0 auto;
-}
-.color a {
-    text-decoration: none;
-    visibility: hidden;
-}
-.color a:before {
-    visibility: visible;
-    content: "";
-    display: inline-block;
-    border: 10px solid transparent;
-    border-radius: 50%;
-    padding: 0;
-    margin-left: 10px;
-    text-decoration: none;
-}
-li.color:first-child a:before {
-    border-color: whitesmoke;
-    margin-left: 0;
-}
-li.color:nth-child(2) a:before {
-    border-color: yellow;
-}
-li.color:nth-child(3) a:before {
-    border-color: orange;
-}
-li.color:nth-child(4) a:before {
-    border-color: red;
-}
-li.color:nth-child(5) a:before {
-    border-color: lightsalmon;
-}
-li.color:nth-child(6) a:before {
-    border-color: pink;
-}
-li.color:nth-child(7) a:before {
-    border-color: purple;
-}
-li.color:nth-child(8) a:before {
-    border-color: mediumturquoise;
-}
-li.color:nth-child(9) a:before {
-    border-color: green;
-}
-
-/*links behavior*/
-
 a:hover {
     text-shadow: 0px 0px 10px rgb(214, 230, 231);
 }
