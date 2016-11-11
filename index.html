@@ -1,48 +1,95 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ua">
 <head>
-    <meta charset="UTF-8">
-    <title>Lemberg Decor</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+	<meta charset="UTF-8">
+	<title>Carousel</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <div class="logo big">
-            <p class="brand"><a href="index.html">Lemberg Decor</a></p>
-        </div>
-        <nav>
-            <div class="linkage"><a href="about.html">Про нас</a></div>
-            <div class="linkage"><a href="images.html">Фотогалерея</a></div>
-            <div class="linkage"><a href="contact.html">Контакти</a></div>
-        </nav>
-    </header>
-    <div class="main-container">
-        <div class="carousel"></div>
-        <div class="content">
-            <section>
-                <h1>Весілля в кольорі і зі смаком</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam accumsan orci mollis cursus. Proin commodo tellus lacus, non facilisis massa efficitur ac. Vivamus convallis blandit orci, id egestas nulla convallis lacinia. Quisque pretium ligula in lorem fermentum malesuada. Sed nisl odio, consectetur ac volutpat ut, rhoncus nec neque. In a dapibus lectus. Vestibulum gravida libero in sapien placerat ultrices. Nulla tincidunt velit eros, sed pretium turpis feugiat sit amet. Sed lobortis nulla felis, quis egestas augue commodo ac. Nunc condimentum ex at velit feugiat suscipit. Vestibulum ornare neque porttitor purus sagittis consectetur. Pellentesque odio eros, tincidunt ac interdum at, semper sollicitudin neque.
-
-Nulla at neque pretium, viverra tortor ac, molestie ligula. Morbi augue massa, maximus quis nunc et, commodo ultrices ligula. Integer lorem nunc, accumsan non enim nec, posuere varius mauris. Ut at sodales ante. Morbi tristique, diam a vehicula egestas, quam lorem posuere ex, id ornare augue neque efficitur tellus. Praesent at eros nunc. Aliquam erat volutpat. Praesent id tortor egestas, suscipit massa et, rhoncus purus. Nam consequat augue eget elementum sollicitudin. Nunc semper fringilla enim, et auctor dui rhoncus non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur suscipit condimentum augue, sit amet venenatis mi gravida vel.
-
-Maecenas eleifend tempor urna, vel porta enim finibus eu. Vestibulum fringilla rutrum varius. Nullam sollicitudin justo eros, egestas placerat ipsum consectetur at. Pellentesque in fringilla ipsum. Mauris nec lorem volutpat, rhoncus sem quis, maximus nibh. Quisque lectus ligula, placerat in pretium quis, vestibulum ac felis. Vestibulum sit amet augue egestas, tincidunt diam vitae, maximus odio. Vivamus nec purus eleifend, mollis lacus ac, consequat velit. Nullam placerat orci vel lacus malesuada, id iaculis enim consequat. Ut porttitor arcu neque, ac suscipit justo pharetra in. Praesent pretium varius metus, et efficitur arcu blandit nec. Sed scelerisque molestie elit ut iaculis.
-
-In hac habitasse platea dictumst. Fusce rutrum, nulla ut facilisis ultrices, lectus est placerat diam, id sodales velit dui a eros. Donec at metus nisl. In faucibus diam eget ultricies laoreet. Aenean sodales cursus est. Ut condimentum euismod scelerisque. Nam tincidunt aliquam massa, ut lobortis nisi maximus id. In id efficitur ligula. Sed vehicula porta lorem, nec viverra diam dignissim ut.
-
-Morbi ac neque in leo consequat suscipit ut et tellus. Proin sed elementum nisi, imperdiet porttitor diam. Suspendisse potenti. Integer pretium, nunc eu scelerisque elementum, ante eros dapibus nisl, eget porttitor nulla libero id leo. Quisque feugiat ante ex, nec fermentum nulla vestibulum sed. Suspendisse tincidunt vehicula tortor quis posuere. Nulla sit amet condimentum nulla. Fusce aliquam eu arcu at malesuada. Vivamus ac sodales ipsum.</p>
-        </section>
-        </div>
-        <aside></aside>
+    <div class="brand">
+            <span>Lemberg Decor</span>
+    </div>
+    <nav class="flex-nav">
+        <ul id="flex-navigation" class="flex-navigation">
+        <li class="flex-link"><a href="#" class="a-link">Головна</a></li>
+        <li class="flex-link"><a href="#" class="a-link">Про нас</a></li>
+        <li class="flex-link"><a href="#" class="a-link">Фотогалерея</a></li>
+        <li class="flex-link"><a href="#" class="a-link">Контакти</a></li>
+    </ul>
+    </nav>
+    <div class="main-content">
+       <div id="content-slider">
+          <div id="slider">  <!-- Контейнер для слайдера -->
+             <div id="mask">  <!-- Маска -->      
+             <ul>
+             <li id="first" class="firstanimation">  <!-- ID для всплывающей подсказки и класс для анимации -->
+             <a href="#"> <img src="img/img1.jpg" alt="Winter bouquet"/> </a>
+             <div class="tooltip"> <h1>Bold colors</h1> </div>
+             </li>
+    
+             <li id="second" class="secondanimation">
+             <a href="#"> <img src="img/img2.jpg" alt="Cherry Wedding"/> </a>
+             <div class="tooltip"> <h1>Cherry in the snow</h1> </div>
+             </li>
+    
+             <li id="third" class="thirdanimation">
+             <a href="#"> <img src="img/img3.jpg" alt="Autumnal bouquet"/> </a>
+             <div class="tooltip"> <h1>Exotic Autumn</h1> </div>
+             </li>
+    
+             <li id="fourth" class="fourthanimation">
+             <a href="#"> <img src="img/img4.jpg" alt="Floral Geometry"/> </a>
+             <div class="tooltip"> <h1>Flower Globe</h1> </div>
+             </li>
+    
+             <li id="fifth" class="fifthanimation">
+             <a href="#"> <img src="img/img5.jpg" alt="Sunbathing"/> </a>
+             <div class="tooltip"> <h1>The spring beauty</h1> </div>
+             </li>
+             </ul>
+             </div>  <!-- The end of mask -->
+             <div class="progress-bar"></div>  <!-- Progress bar-->
+          </div>  <!-- The end od container -->
+       </div> <!--The end of carousel wrapper-->
+       <article>
+           <h1>Квіти та любов</h1>
+           <p>Весілля завжди є дуже відповідальним моментом для закоханої пари, яка
+           вирішила поєнати свої долі та жити разом. Весілля повинно бути
+           красивим та веселим, аби відобразити щастя самих молодят і сподобатися гостям. 
+           Пошуки ресторану, підбір фотографа, кравчині, візажиста, флориста, кондитера,
+           музикантів, ведучого, координатора, пошуки транспорту, аби доправити 
+           гостей на свято та потім безпечно розвезти їх по домівках. А ще треба
+           поставити перший танець, можливо варте запросити якесь шоу, або ж
+           замовити важкий дим для офрмлення сцени першого танцю? Питань і клопотів
+           просто безліч, зовсім не дивно, що наречені, котрі не хочуть в постійних
+           клопотах прогавити свій найкращий день, звертаються до весільних організаторів,
+           які перебирають ці всі клопоти на себе і супроводжують підготовку до
+           весілля аж до завершення свята.</p>
+           <p>Наша <a href="about.html">команда</a> буде рада допомогти вам! Ми 
+           любимо свою роботу, ми знаємо, що може знадобитися нареченій на весіллі, ми завжди шукаємо
+           неповторний образ для кожної красуні, наші флористи і декоратори 
+           спільно розробляють весь проект, аби на вашому святі було максимум
+           краси, гармонії та приводів для захоплення усіх. Наші роботи розміщені у
+           <a href="images.html">фотогалереї</a></p>, тому запрошуємо вас до перегляду,
+           а якщо вам сподобалося - <a href="contact.html">зв'яжіться з нами!</a>
+       </article>
     </div>
     <footer>
-        <div class="logo small"><p>Lemberg Decor</p></div>
-        <div class="contacts"><p>Some contacts</p></div>
+        <div class="bottom">
+      <div class="logo-information">
+        <h3>Lemberg Decor</h3>
+        <p>Студія весільної флористики та декору</p>
+    <p>Подарункові букети та авторський декор</p>
+      </div>
+      <div class ="copyright-contacts">
+        <p>Site by Yuriy Zakharchuk</p>
+        <p>All rights reserved</p>
+        <p>Lemberg Decor 2017</p>
+      </div>
+      </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-</html>
+    </body>
+    </html>
