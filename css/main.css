@@ -104,11 +104,12 @@ li:hover {
     float: left;
     margin-right: 20px;
 }
-section {
-    display: block;
-    margin-bottom: 20px;
+.fa-facebook-square {
+    color: rgb(176, 170, 194);
 }
-
+.fa-instagram {
+    color: rgb(176, 170, 194);
+}
 /*Animation rules*/
 /* LAYOUT */
 .container {
