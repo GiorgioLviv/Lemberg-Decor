@@ -1,198 +1,301 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-a:hover {
-    text-decoration: none;
-    color: white;
+/* Common */
+html, body {
+	font-size:14px;
+	font-family:"Open Sans", serif;
+	min-width:960px;
+	margin:0;
+	padding:0;
+	color:#aaa;
+    height: 100%;
 }
 body {
     -webkit-display: flex;
-    -webkit-flex-flow: column wrap;
-    -wekit-justify-content: space-between;
-    flex-flow: column wrap;
-    justify-content: space-between;
     display: flex;
-    min-height: 100vh;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: white;
+    flex-direction: column;
+    flex: auto;
 }
-header, footer {
-    background-color: rgb(74,66,87);
-    color: rgb(214, 230, 231);
+/*Navigation*/
+.flex-nav {
+   background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
+   display: flex;
+   flex-flow: row wrap;
 }
-header {
-    -webkit-display: flex;
-    -webkit-flex-flow: row wrap;
-    -webkit-justify-content: space-around;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    min-height: 50px;
-}
-.big {
-    -webkit-flex: 1 1 auto;
-    flex: 1 1 auto;
-    margin-left: 20px;
-    margin: 0;
+.brand {
+    padding:10px 0;
+    width: 100%;
+    background-color: rgb(242, 239, 232);
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(133, 110, 58);
     
 }
-.brand a {
-    font-family: 'Courgette', cursive;
-    font-size: 35px;
-    text-shadow: 4px 4px 4px #aaa;
-    padding: 0 0 0 20px;
-    margin: 0;
-}
-nav {
-    -webkit-flex: 4 1 auto;
-    -webkit-display: flex;
-    -webkit-flex-flow: row wrap;
-    -webkit-justify-content: space-around;
-    flex:4 1 auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-header a, footer a {
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
-    text-align: center;
-}
-.linkage a {
-     display: block;
-     padding: 10px;
-}
-.main-container {
-    -webkit-display: flex;
-    -webkit-flex-flow: row wrap;
-    -webkit-justify-content: space-between;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    min-height: 100%;
-    margin-bottom: 10px;
-}
-/*Here is some style of carousel*/
-.carousel {
-    margin: 30px auto 0 auto;
-}
-.carousel img {
-    max-width: 640px;
-    max-height: 480px;
-}
-.glyphicon-chevron-left, .glyphicon-chevron-right {
-    color: rgb(74, 66, 87);
-}
-.left, .right {
-    background-color: rgb(195, 223, 229);
-}
-.carousel-indicators li {
-    border-color: rgb(74, 66, 87);
-}
-.carousel-indicators li.active {
-    background-color: rgb(74, 66, 87);
-}
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-}
-/*Here is the end of carousel style*/
-footer {
-    -webkit-display: flex;
-    -webkit-flex-flow: row wrap;
-    -webkit-justify-content: space-between;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    height: 80px;
-    margin-bottom: 0;
-    align-items: center;
-   
-}
-.content { 
-    min-height:100%;
-}
-.content, .main-container {
-    width: 80%;
-    margin: 0 auto;
-}
-div.colors {
+.brand span {
     display: block;
-    width: 80%;
     margin: 0 auto;
+    max-width: 960px;
+    font-family: 'Courgette', cursive;
+    Font-size: 40px;
 }
-.images {
-    margin: 0 auto;
-}
-/*color browser for images*/
-.colors {
-    text-align: center;
-}
-.colorlist {
-    list-style-type: none;
-    }
-.color {
-  display: inline-block;
+#flex-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-left: 0;
+  padding-left: 0;
+  max-width: 960px;
   margin: 0 auto;
 }
-.color a {
-    text-decoration: none;
-    visibility: hidden;
+.flex-link {
+  display: inline-block;
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  flex-grow: 1; 
+  background: linear-gradient(to bottom, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+  border-bottom: solid 1px rgb(204, 192, 165);
+  font-family: 'Pattaya', sans-serif;
+  font-size: 20px;
 }
-.color a:before {
-    visibility: visible;
-    content: "";
-    display: inline-block;
-    border: 10px solid transparent;
-    border-radius: 50%;
-    padding: 0;
-    margin-left: 10px;
-    text-decoration: none;
+li:hover {
+  background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
 }
-li.color:first-child a:before {
-    border-color: whitesmoke;
-    margin-left: 0;
+.a-link {
+  padding: 10px 8px;
+  display: block;
+  text-decoration: none;
+  color: rgb(133, 110, 58);
 }
-li.color:nth-child(2) a:before {
-    border-color: yellow;
+.a-link:hover {
+  color: rgb(242, 239, 232);
 }
-li.color:nth-child(3) a:before {
-    border-color: orange;
+/*End navigation*/
+
+/*Content rules*/
+.main-content {
+    max-width: 960px;
+    margin: 0 auto 50px auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 5px solid transparent;
+    -moz-border-image: -moz-linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
+    -webkit-border-image: -webkit-linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
+    border-image: linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
+    border-image-slice: 1;
+    font-size: 14px;
+    color: rgb(133, 110, 58);
 }
-li.color:nth-child(4) a:before {
-    border-color: red;
+.main-content h1 {
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
+    text-align: center;
 }
-li.color:nth-child(5) a:before {
-    border-color: lightsalmon;
-}
-li.color:nth-child(6) a:before {
-    border-color: pink;
-}
-li.color:nth-child(7) a:before {
-    border-color: purple;
-}
-li.color:nth-child(8) a:before {
-    border-color: mediumturquoise;
-}
-li.color:nth-child(9) a:before {
-    border-color: green;
+/*Animation rules*/
+/* LAYOUT */
+.container {
+	margin:0 auto;
+	overflow:hidden;
+	width:960px;
+
 }
 
-/*links behavior*/
-
-a:hover {
-    text-shadow: 0px 0px 10px rgb(214, 230, 231);
+/* CONTENT SLIDER */
+#content-slider {
+	width:100%;
+	height:500px;
+	margin:10px auto 0;
 }
-a:active {
-    text-shadow: 0px 0px 10px rgb(152,251,152);
-    color: rgb(152,251,152);
+/* SLIDER */
+#slider {
+	background:#000;
+	border:5px solid #eaeaea;
+	box-shadow:1px 1px 5px rgba(0,0,0,0.7);
+	height:480px;
+	width:640px;
+	margin:40px auto 0;
+	overflow:visible;
+	position:relative;
+}
+#mask {
+	overflow:hidden;
+	height:480px;
+}
+/*styles for slider*/
+#slider {
+   background: #000;
+   border: 5px solid #eaeaea;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 480px;
+   width: 640px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+/*styles for mask*/
+#mask {
+   overflow: hidden;
+   height: 480px;
+}
+/*styles for images*/
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+#slider li {
+   width: 640px;  /* Ширина изображения */
+   height: 480px; /* Высота изображения */
+   position: absolute;
+   top: -650px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+/*Animation setting for images*/
+#slider li.firstanimation {
+   animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+   animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+   animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+   animation: cyclefour 25s linear infinite;
+}
+
+#slider li.fifthanimation {
+   animation: cyclefive 25s linear infinite;
+}
+/*Animation setting for movement*/
+@keyframes cycle {
+   0%  { top: 0px; } /* При запуске слайдера, первое изображение уже видимо */
+   4%  { top: 0px; } /* Стартовая позиция */
+   16% { top: 0px; opacity:1; z-index:0; } /* С 4% до 16 % (3 секунды) изображение видимо */
+   20% { top: 640px; opacity: 0; z-index: 0; } /* с 16% до 20% (1 секунды)выход изображения*/
+   21% { top: -640px; opacity: 0; z-index: -1; } /* Возвращение на исходную позицию за пределами маски */
+   92% { top: -640px; opacity: 0; z-index: 0; }
+   96% { top: -640px; opacity: 0; } /* С 96% до 100% (1 секунда) – вход */
+   100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { top: -640px; opacity: 0; } /* Исходная позиция за пределами маски */
+   16% { top: -640px; opacity: 0; }/* Начало движения с 16% */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { top: 640px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { top: -640px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclethree {
+   0%  { top: -640px; opacity: 0; }
+   36% { top: -640px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; }
+   56% { top: 0px; opacity: 1; }
+   60% { top: 640px; opacity: 0; z-index: 0; }
+   61% { top: -640px; opacity: 0; z-index: -1; }
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefour {
+   0%  { top: -640px; opacity: 0; }
+   56% { top: -640px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 640px; opacity: 0; z-index: 0; }
+   81% { top: -640px; opacity: 0; z-index: -1; }
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+   0%  { top: -640px; opacity: 0; }
+   76% { top: -640px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 640px; opacity: 0; z-index: 0; }
+}
+/*progress bar*/
+.progress-bar {
+   position: relative;
+   top: -5px;
+   width: 680px;
+   height: 5px;
+   background: rgb(176, 170, 194);
+   animation: fullexpand 25s ease-out infinite;
+}
+/* Строка состояния анимации */
+
+@keyframes fullexpand {
+   /* В этих ключевых кадрах анимация стационарна */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* В этих — оживает */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.5; }
+
+   /* В этих — плавно заполняется */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.9; }
+
+   /* В этих ключевых кадрах индикатор выполнения завершил свой путь */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.5; }
+
+   /* В этих ключевых кадрах индикатор выполнения исчезнет, а затем возобновит цикл */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+/*styles for tooltip*/
+
+#slider .tooltip {
+	background:rgba(219,233,216,0.8);
+	width:300px;
+	height:60px;
+	position:relative;
+	bottom:75px;
+	left:-320px;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;  
+}
+#slider .tooltip h1 {
+	color:#fff;
+	font-size:24px;
+	font-weight:300;
+	line-height:60px;
+	padding:0 0 0 20px;
+}
+#slider li#first:hover .tooltip, 
+#slider li#second:hover .tooltip, 
+#slider li#third:hover .tooltip, 
+#slider li#fourth:hover .tooltip, 
+#slider li#fifth:hover .tooltip {
+	left:0px;
+}
+#slider:hover li, 
+#slider:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+footer {
+    flex-grow: 1;
+    background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
+}
+.bottom {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
+    color: rgb(133, 110, 58);
+    margin: 0 auto;
+}
+.logo-information {
+    padding-left: 10px;
+}
+.copyright-contacts {
+    padding-right: 10px;
+    text-align: right;
 }
