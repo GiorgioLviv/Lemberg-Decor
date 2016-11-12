@@ -1,0 +1,163 @@
+/*Animation rules*/
+/* LAYOUT */
+.container {
+	margin:0 auto;
+	overflow:hidden;
+	width:960px;
+}
+/* CONTENT SLIDER */
+#content-slider {
+	width:100%;
+	height:500px;
+	margin:10px auto 0;
+}
+/*styles for mask*/
+#mask {
+	overflow:hidden;
+	height:480px;
+}
+/*styles for slider*/
+#slider {
+   background: #000;
+   border: 5px solid #eaeaea;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 480px;
+   width: 640px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+/*styles for images*/
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+#slider li {
+   width: 640px;  /* Ширина изображения */
+   height: 480px; /* Высота изображения */
+   position: absolute;
+   top: -650px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+/*Animation setting for images*/
+#slider li.firstanimation {
+   animation: cycle 25s linear infinite;
+}
+#slider li.secondanimation {
+   animation: cycletwo 25s linear infinite;
+}
+#slider li.thirdanimation {
+   animation: cyclethree 25s linear infinite;
+}
+#slider li.fourthanimation {
+   animation: cyclefour 25s linear infinite;
+}
+#slider li.fifthanimation {
+   animation: cyclefive 25s linear infinite;
+}
+/*Animation setting for movement*/
+@keyframes cycle {
+   0%  { top: 0px; } /* First image visible at the start */
+   4%  { top: 0px; } /* Сstart position */
+   16% { top: 0px; opacity:1; z-index:0; } /* From 4% to 16 % (3 sec) image is visible */
+   20% { top: 640px; opacity: 0; z-index: 0; } /* From 16% to 20% (1 sec) image displays*/
+   21% { top: -640px; opacity: 0; z-index: -1; } /* Return ath the strat position out off mask's margin */
+   92% { top: -640px; opacity: 0; z-index: 0; }
+   96% { top: -640px; opacity: 0; } /* form 96% to 100% (1 sec) – enter */
+   100%{ top: 0px; opacity: 1; }
+}
+@keyframes cycletwo {
+   0%  { top: -640px; opacity: 0; } /* Исходная позиция за пределами маски */
+   16% { top: -640px; opacity: 0; }/* Начало движения с 16% */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { top: 640px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { top: -640px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclethree {
+   0%  { top: -640px; opacity: 0; }
+   36% { top: -640px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; }
+   56% { top: 0px; opacity: 1; }
+   60% { top: 640px; opacity: 0; z-index: 0; }
+   61% { top: -640px; opacity: 0; z-index: -1; }
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefour {
+   0%  { top: -640px; opacity: 0; }
+   56% { top: -640px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 640px; opacity: 0; z-index: 0; }
+   81% { top: -640px; opacity: 0; z-index: -1; }
+   100%{ top: -640px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+   0%  { top: -640px; opacity: 0; }
+   76% { top: -640px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 640px; opacity: 0; z-index: 0; }
+}
+/*progress bar*/
+.progress-bar {
+   position: relative;
+   top: -5px;
+   width: 680px;
+   height: 5px;
+   background: rgb(176, 170, 194);
+   animation: fullexpand 25s ease-out infinite;
+}
+@keyframes fullexpand {
+   /* В этих ключевых кадрах анимация стационарна */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* В этих — оживает */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.5; }
+
+   /* В этих — плавно заполняется */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.9; }
+
+   /* В этих ключевых кадрах индикатор выполнения завершил свой путь */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.5; }
+
+   /* В этих ключевых кадрах индикатор выполнения исчезнет, а затем возобновит цикл */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+/*styles for tooltip*/
+
+#slider .tooltip {
+	background:rgba(219,233,216,0.8);
+	width:300px;
+	height:60px;
+	position:relative;
+	bottom:75px;
+	left:-320px;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;  
+}
+#slider .tooltip h1 {
+	color:#fff;
+	font-size:24px;
+	font-weight:300;
+	line-height:60px;
+	padding:0 0 0 20px;
+}
+#slider li#first:hover .tooltip, 
+#slider li#second:hover .tooltip, 
+#slider li#third:hover .tooltip, 
+#slider li#fourth:hover .tooltip, 
+#slider li#fifth:hover .tooltip {
+	left:0px;
+}
+#slider:hover li, 
+#slider:hover .progress-bar {
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
