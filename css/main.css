@@ -76,7 +76,8 @@ body {
   
 }
 li:hover {
-  background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -webkit-linear-gradient(bottom, rgb(133, 110, 58), rgb(201, 180, 115)); 
+    background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
 }
 .a-link {
   padding: 10px 8px;
