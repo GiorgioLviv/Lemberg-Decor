@@ -10,24 +10,41 @@ html, body {
     background-color: white;
 }
 body {
-    -webkit-display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
     flex: auto;
 }
 /*Navigation*/
-.flex-nav {
-   background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
-   display: flex;
-   flex-flow: row wrap;
+.flex-nav {  /*fixed*/
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(#f2eee8 0%), color-stop(#dbe9d8 100%));
+    background: -webkit-linear-gradient(bottom, #f2eee8 0%, #dbe9d8 100%);
+    background: -webkit-linear-gradient(top, rgb(242, 239, 232), rgb(219, 207, 180));
+    background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180)); /*fixed*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 .brand {
     padding:10px 0;
     width: 100%;
-    background-color: rgb(242, 239, 232);
+    background-color: #f2eee8;
     margin: 0 auto;
     text-align: center;
-    color: rgb(133, 110, 58);
+    color: #856e3a;
     
 }
 .brand span {
@@ -37,14 +54,14 @@ body {
     font-family: 'Courgette', cursive;
     Font-size: 40px;
 }
-#flex-navigation {
-   display: flex;
+/* пункты меню */
+.navbar {
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
-  margin-left: 0;
+  margin: 0 auto;
   padding-left: 0;
   max-width: 960px;
-  margin: 0 auto;
 }
 .flex-link {
   display: inline-block;
@@ -54,56 +71,45 @@ body {
   padding: 0;
   text-align: center;
   flex-grow: 1; 
-  background: -moz-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-    background: -webkit-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-    background: -o-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-    background: -ms-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-    background: linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-    border-bottom: solid 1px rgb(204, 192, 165);
-    font-family: 'Pattaya', sans-serif;
-    font-size: 20px;
+  background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
+  border-bottom: solid 1px rgb(204, 192, 165);
+  
 }
 li:hover {
-    background: -moz-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -webkit-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -o-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -ms-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
-    color: rgb(242, 239, 232);
+  background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
 }
-.flex-nav li .a-link {
+.a-link {
   padding: 10px 8px;
   display: block;
   text-decoration: none;
   color: rgb(133, 110, 58);
-  background: linear-gradient(to bottom, rgb(242, 239, 232, 0.8), rgb(219, 207, 180, 0.8));
+  margin-bottom: 0;
 }
 .a-link:hover {
-     background: -moz-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -webkit-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -o-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: -ms-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
-    background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
-    color: rgb(242, 239, 232);
+  color: rgb(242, 239, 232);
 }
+
 /*End navigation*/
 
 /*Content rules*/
 .main-content {
     max-width: 960px;
     margin: 0 auto 50px auto;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     box-sizing: border-box;
     padding: 10px;
     border: 5px solid transparent;
-    -moz-border-image: -moz-linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
     -webkit-border-image: -webkit-linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
-    border-image: linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
+    -o-border-image: linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
+       border-image: linear-gradient(to top, #ffffff 0%, rgba(219,233,216,0.8) 50%, #ffffff 100%);
     border-image-slice: 1;
     font-size: 14px;
     color: rgb(133, 110, 58);
 }
-.main-content h1 {
+h1 {
     font-size: 25px;
     font-family: 'Pattaya', sans-serif;
     text-align: center;
@@ -115,6 +121,7 @@ li:hover {
 .about_team img {
     width: 200px;
     height: 200px;
+    border: 2px solid #562eab;
     border: 2px solid rgba(86,46,171,0.5);
     float: left;
     margin-right: 20px;
@@ -127,15 +134,29 @@ li:hover {
 }
 
 footer {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background: -webkit-linear-gradient(top, rgb(242, 239, 232), rgb(219, 207, 180));
     background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
     max-height: 125px;
 }
 .bottom {
     max-width: 960px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    background: -webkit-linear-gradient(top, rgb(242, 239, 232), rgb(219, 207, 180));
     background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
     color: rgb(133, 110, 58);
     margin: 0 auto;
