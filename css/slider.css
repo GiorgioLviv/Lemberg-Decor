@@ -142,12 +142,13 @@
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;  
 }
-#slider .tooltip h1 {
+#slider .tooltip h2 {
 	color:#fff;
 	font-size:24px;
 	font-weight:300;
 	line-height:60px;
 	padding:0 0 0 20px;
+	font-family: 'Courgette', cursive;
 }
 #slider li#first:hover .tooltip, 
 #slider li#second:hover .tooltip, 
