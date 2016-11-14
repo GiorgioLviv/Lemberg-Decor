@@ -24,20 +24,32 @@
     </nav>
     <div class="main-content">
        <article>
-           <section>
+           <section class="contact-data">
                <h2>Наші телефони</h2>
                <p>Київстар: +38(067)-ХХХ-ХХ-ХХ</p>
                <p>Київстар: +38(097)-ХХХ-ХХ-ХХ</p>
                <p>Life: +38(093)-XXX-XX-XX</p>
            </section>
-           <section>
+           <section class="contact-data">
                <h2>Ми в соцмережах</h2>
                <p><a href="https://www.facebook.com/lembergdecor/"><i class="fa fa-2x fa-facebook-square" aria-hidden="true"></i></a>
-               <a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+               <a href="http://instagram.com/lembergdecor"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+               <a href="https://vk.com/lembergdecor"><i class="fa fa-2x fa-vk" aria-hidden="true"></i></a>
                </p>
            </section>
-           <section>
-               <h2>Напишіть нам</h2>
+           <section class="contact-data">
+                <form>
+                   <fieldset>
+                       <legend><h2>Напишіть нам</h2></legend>
+                       <label for="name">Ваше ім'я:</label>
+                       <input type="text" name="name" id="name" placeholder="Мене звати..."/><br><br>
+                       <label for="tel">Ваш телефон:</label>
+                       <input type="tel" name="tel" id="tel"placeholder="+38-XXX-XXX-XXXX"/><br><br>
+                       <textarea rows="5" cols="90" placeholder="Залиште ваш коментар"></textarea><br><br>
+                       <button type="submit" value="Submit" id="sending">Відправити</button>
+                   </fieldset>
+                   
+               </form>
            </section>
            
        </article>

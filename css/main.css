@@ -56,21 +56,38 @@ body {
 }
 /* пункты меню */
 .navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin: 0 auto;
   padding-left: 0;
   max-width: 960px;
 }
 .flex-link {
   display: inline-block;
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
-  flex-grow: 1; 
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; 
+  background: -webkit-linear-gradient(top, rgb(242, 239, 232), rgb(219, 207, 180)); 
   background: linear-gradient(to bottom, rgb(242, 239, 232), rgb(219, 207, 180));
   border-bottom: solid 1px rgb(204, 192, 165);
   
@@ -79,12 +96,14 @@ li:hover {
     background: -webkit-linear-gradient(bottom, rgb(133, 110, 58), rgb(201, 180, 115)); 
     background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
 }
-.a-link {
-  padding: 10px 8px;
-  display: block;
-  text-decoration: none;
-  color: rgb(133, 110, 58);
-  margin-bottom: 0;
+.a-link {  
+    padding: 10px 8px;
+    display: block;
+    text-decoration: none;
+    color: rgb(133, 110, 58);
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
 }
 .a-link:hover {
   color: rgb(242, 239, 232);
@@ -94,7 +113,7 @@ li:hover {
 
 /*Content rules*/
 .main-content {
-    max-width: 960px;
+    width: 960px;
     margin: 0 auto 50px auto;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -109,6 +128,13 @@ li:hover {
     border-image-slice: 1;
     font-size: 14px;
     color: rgb(133, 110, 58);
+}
+.main-content a {
+     font-family: 'Pattaya', sans-serif;
+     color: rgb(86, 46, 171);
+     text-decoration: none;
+     font-size: 15px;
+     margin-top: 20px;
 }
 h1 {
     font-size: 25px;
@@ -126,12 +152,13 @@ h1 {
     border: 2px solid rgba(86,46,171,0.5);
     float: left;
     margin-right: 20px;
+    border-radius: 50%;
 }
 .fa-facebook-square {
-    color: rgb(176, 170, 194);
+    color: rgb(86, 46, 171);;
 }
 .fa-instagram {
-    color: rgb(176, 170, 194);
+    color: rgb(86, 46, 171);
 }
 
 footer {
@@ -168,4 +195,24 @@ footer {
 .copyright-contacts {
     padding-right: 10px;
     text-align: right;
+}
+.contact-data {
+    padding-left: 20px;
+    display: block;
+}
+h2 {
+    font-size: 20px;
+    font-family: 'Pattaya', sans-serif;
+}
+input, legend {
+    background: rgb(242, 239, 232);
+	border: 1px solid rgba(133, 110, 58, 0.8);
+	border-radius: 5px;
+}
+fieldset {
+   background: rgba(242, 239, 232, 0.1); 
+}
+textarea, fieldset {
+    border: 1px solid rgb(133, 110, 58);
+	border-radius: 8px;
 }
