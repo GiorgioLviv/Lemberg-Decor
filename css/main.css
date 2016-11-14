@@ -38,7 +38,7 @@ body {
     Font-size: 40px;
 }
 #flex-navigation {
-  display: flex;
+   display: flex;
   flex-direction: row;
   flex-grow: 1;
   margin-left: 0;
@@ -54,22 +54,37 @@ body {
   padding: 0;
   text-align: center;
   flex-grow: 1; 
-  background: linear-gradient(to bottom, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
-  border-bottom: solid 1px rgb(204, 192, 165);
-  font-family: 'Pattaya', sans-serif;
-  font-size: 20px;
+  background: -moz-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+    background: -webkit-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+    background: -o-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+    background: -ms-linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+    background: linear-gradient(top, rgba(242, 239, 232, 0.8), rgba(219, 207, 180, 0.8));
+    border-bottom: solid 1px rgb(204, 192, 165);
+    font-family: 'Pattaya', sans-serif;
+    font-size: 20px;
 }
 li:hover {
-  background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -moz-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -webkit-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -o-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -ms-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
+    color: rgb(242, 239, 232);
 }
-.a-link {
+.flex-nav li .a-link {
   padding: 10px 8px;
   display: block;
   text-decoration: none;
   color: rgb(133, 110, 58);
+  background: linear-gradient(to bottom, rgb(242, 239, 232, 0.8), rgb(219, 207, 180, 0.8));
 }
 .a-link:hover {
-  color: rgb(242, 239, 232);
+     background: -moz-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -webkit-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -o-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: -ms-linear-gradient(top, rgb(133, 110, 58), rgb(201, 180, 115));
+    background: linear-gradient(to top, rgb(133, 110, 58), rgb(201, 180, 115));
+    color: rgb(242, 239, 232);
 }
 /*End navigation*/
 
