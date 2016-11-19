@@ -42,16 +42,16 @@
                </p>
            </section>
            <section class="contact-data">
-                <form>
+                <form method="post" action="" id="lemberg-form">
                    <fieldset>
                        <legend><h2>Напишіть нам</h2></legend>
                        <label for="name">Ваше ім'я:</label><br>
-                       <input type="text" name="name" id="name" placeholder="Мене звати..."/><br><br>
+                       <input type="text" name="name" id="name" size="32" maxlength="36" placeholder="Мене звати..." required/><br><br>
                        <label for="tel">Ваш телефон:</label><br>
-                       <input type="tel" name="tel" id="tel"placeholder="+38-XXX-XXX-XXXX"/><br><br>
+                       <input type="tel" name="tel" id="tel" size="32"placeholder="+38-XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}" required/><br><br>
                        <label for="email">Ваша електронна адреса:</label><br>
-                       <input type="email" name="email" id="email" placeholder="username@email.com" required/><br><br>
-                       <textarea rows="5" cols="35" placeholder="Залиште ваш коментар"></textarea><br><br>
+                       <input type="email" name="email" id="email" placeholder="username@email.com" size="32" maxlength="36" required/><br><br>
+                       <textarea rows="5" cols="35" id="com" name="com" placeholder="Залиште ваш коментар" required></textarea><br><br>
                        <button type="submit" value="Submit" id="sending">Відправити</button>
                    </fieldset>                    
                </form>
@@ -72,5 +72,9 @@
         </div>
       </div>
     </footer>
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/form.js"></script>
     </body>
     </html>
