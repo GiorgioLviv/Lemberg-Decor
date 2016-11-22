@@ -1,22 +1,23 @@
 
 $(function() {
-    $('button.applicationButton').click(function(e) {
+    $('button#sending').click(function(e) {
         e.preventDefault();
         $.ajax({
-                url: "https://formspree.io/vexx.lviv@gmail.com",
+                url: "https://formspree.io/y_zakharchuk@yahoo.com",
                 method: "POST",
                 data: {
                     userName: $('#name').val(),
                     userEmail: $('#email').val(),
-                    userPhone: $('#tel').val()
+                    userPhone: $('#tel').val(),
+                    userCom: $('#com').val()
                 },
                 dataType: "json"
             })
             .done(function() {
-                $('form').html('<h1>ваше повідомлення надіслане! я звяжусь з вами найближчим часом!</h1>')
+                $('form').html('<h1>Дякуємо за відгук! Ми перетелефонуємо вам.</h1>')
             })
             .fail(function() {
-                $('form').html('<h1>нажаль ви ввели некоректні данні! спробуйте ще раз!</h1>')
+                $('form').html('<h1>Упс!</h1> <p>Обновіть сторінку та спробуйте ще раз!</p>')
             });
     });
 });
